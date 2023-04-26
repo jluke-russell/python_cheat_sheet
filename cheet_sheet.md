@@ -1,15 +1,15 @@
 # Challenge 1 
-# Filtering a dataset 
+## Filtering a dataset 
 luke_history = names.query("name == 'Luke' & year >= 1965 & year <= 1999 ")[['name','year','MD']]
 #print(luke_history)
 
-# Making a Table for Markdown
+## Making a Table for Markdown
 print(luke
     .head(5)
     .filter(["name", "year", "MD"])
     .to_markdown(index=False))
 
-# Multiple names (or states) and it's graph
+## Multiple names (or states) and it's graph
 bible_names = names.query('name in ["Mary", "Martha", "Paul", "Peter"]  & year >= 1920  & year <= 2000')
 #print(bible_names)
 
@@ -22,7 +22,7 @@ bible_chart = (alt.Chart(bible_names).properties(title='Popularity of Select Chr
   )
 )
 
-# adds vertical and horizontal line 
+## This adds vertical and horizontal line 
 xrule = (
     alt.Chart()
     .mark_rule(color="cyan", strokeWidth=2)
@@ -33,13 +33,15 @@ yrule = (
     alt.Chart().mark_rule(strokeDash=[12, 6], size=2).encode(y=alt.datum(350))
 )
 
-# puts it all together 
+## puts it all together 
 bible_chart + xrule + yrule
 
 # Challenge 2 
 
 mister = pd.Series([np.nan, 15, 22, 45, 31, np.nan, 85, 38, 129, 8000, 21, 2])
+
 mister.median() find median first without NA
+
 mister.mean() find mean after replacing NA
 
 
@@ -60,12 +62,17 @@ tidy_flights.interpolate().reset_index()
 
 # Challenge 5 
 import pandas as pd 
+
 import altair as alt
+
 import numpy as np
 
 from sklearn.model_selection import train_test_split
+
 from sklearn import tree
+
 from sklearn.ensemble import GradientBoostingClassifier
+
 from sklearn import metrics
 
 dwellings_ml = pd.read_csv("https://github.com/byuidatascience/data4dwellings/raw/master/data-raw/dwellings_ml/dwellings_ml.csv")
@@ -88,11 +95,12 @@ y_train.head()
 
 # RGradient Boosting Classifier
 
-# create the model
+## create the model
 classifier = GradientBoostingClassifier()()
 
-# train the model
+## train the model
 classifier.fit(x_train, y_train)
 
-# make predictions
+## make predictions
 y_predictions = classifier.predict(x_test)
+
