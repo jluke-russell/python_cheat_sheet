@@ -45,10 +45,13 @@ Machine learning models and AI can be over confident when over trained thus prod
 - A leaf node (last boxes of trees) with a small sample size within it means the model is being overfitted - deeper a tree goes, the more likely it is to overfit the data. 
 - Changing the perspective or feature you start with will change how the splits are made. 
 - Avoid overfitting by making multiple trees or a forest hahaha random forest classifier
+- If you one-hot encode the holdout data may not include values for some of the new one-hot encodes. you can make a fake column to solve this issue 
+- Make a vanilla (or baseline) model to have something to compare against and see improvements. 
 
 ### Entropy 
 - Presence of level of randomness
 - log2 (1/P(x)) gives us the number of bits --> -log2 P(x)
 - Entropy = SUM P(xi) log2 P(xi)
 - Model is bring trained correctly if the info is being split and there is less info being produced -> meaning which model has the lowest entropy.
-- 
+
+### New Stuff
