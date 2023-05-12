@@ -54,4 +54,10 @@ Machine learning models and AI can be over confident when over trained thus prod
 - Entropy = SUM P(xi) log2 P(xi)
 - Model is bring trained correctly if the info is being split and there is less info being produced -> meaning which model has the lowest entropy.
 
-### New Stuff
+### Gradient Boosted Trees
+
+- Gridsearch cv brute force searches all options 
+- A better way is to narrow search by what hyper parameter combo is best (guided hyperparameter grid search)
+- Both those use number of trees vs depth of the tree
+- Subspace sampling uses same data across all trees but different sets of features for each tree
+- Bootstap and Aggregating aka Bagging means letting every tree have different samples and then put all the findings together 
