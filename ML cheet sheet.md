@@ -61,3 +61,8 @@ Machine learning models and AI can be over confident when over trained thus prod
 - Both those use number of trees vs depth of the tree
 - Subspace sampling uses same data across all trees but different sets of features for each tree
 - Bootstap and Aggregating aka Bagging means letting every tree have different samples and then put all the findings together 
+- Metrics: how wrong was I? called absolute error 
+- uses mean absolute error (MAE) this is the median
+- uses squared error this is the mean 
+- Mean squared error (MSE) good statistical value by its not in the original value as the data (but taking the sqrt does)
+- R^2 takes MSE of the model divided by the MSE of a guess of the mean of each sample (do 1 - R^2 close to 1 good, close to 0, guessing)
