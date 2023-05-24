@@ -66,3 +66,4 @@ Machine learning models and AI can be over confident when over trained thus prod
 - uses squared error this is the mean 
 - Mean squared error (MSE) good statistical value by its not in the original value as the data (but taking the sqrt does)
 - R^2 takes MSE of the model divided by the MSE of a guess of the mean of each sample (do 1 - R^2 close to 1 good, close to 0, guessing)
+- Make sure to create testing, validation sets and do not let your model see the testing set. This will allow you to be more confident in the results. 
