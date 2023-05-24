@@ -67,3 +67,5 @@ Machine learning models and AI can be over confident when over trained thus prod
 - Mean squared error (MSE) good statistical value by its not in the original value as the data (but taking the sqrt does)
 - R^2 takes MSE of the model divided by the MSE of a guess of the mean of each sample (do 1 - R^2 close to 1 good, close to 0, guessing)
 - Make sure to create testing, validation sets and do not let your model see the testing set. This will allow you to be more confident in the results. 
+- Something else big brain, create for loops that parse through all different options and throw out the columns, hyperparameters, etc that do not provide the best results. An average of those should be used for the final model. 
+- Remember that the best model for the testing set may not be the best for the holdout set for various reasons. 
