@@ -70,4 +70,19 @@ Machine learning models and AI can be over confident when over trained thus prod
 - Something else big brain, create for loops that parse through all different options and throw out the columns, hyperparameters, etc that do not provide the best results. An average of those should be used for the final model. 
 - Remember that the best model for the testing set may not be the best for the holdout set for various reasons. 
 - Squared error reduces the impact of outliers - smooths things out. In this case two wrongs make a right (sorta).
-- Normalization: rescales everything between 0-1. The issue is you end up refitting the holdout set compared to the training set. The max and mins can be different.  
+- Normalization: rescales everything between 0-1. The issue is you end up refitting the holdout set compared to the training set. The max and mins can be different. 
+
+### (Artificial) Neural Networks
+
+- Mimicks the human brain (neurons and synapses)
+- neurons connect to each other and pass info, the next neuron decides whether or not the previous one's decision was important or nah. 
+- Learning Rate - a hyper parameter which tells the model how far to jump ahead on the line that represents the model's outputs 
+- Perceptron - an individual neuron that makes a decision. 
+- Need multiple layers of neurons because each neuron learns one new feature that is unique among the other neurons. Having many neurons allows you to create the features using the network that gives you the best result.
+- There's a lot of calculus going on in the background of this moduel. 
+- Neural networks takes linear inputs and a bias (how much to adjust things) and shoves it into a nonlinear activation function, then it moves onto the next neuron. (You can also influence how much that output has on the next neuron.)
+- You can create logistic regression models to replot the data making it easier to pick out what you want. 
+- Each neuron layer transforms the previous one in order to make an easier decision. 
+- Backpropogate our errors to figure out how to fix our mistakes 
+- Forwardpropogate - how our data is entered and flows through the network. 
+ 
