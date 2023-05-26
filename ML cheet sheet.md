@@ -85,4 +85,4 @@ Machine learning models and AI can be over confident when over trained thus prod
 - Each neuron layer transforms the previous one in order to make an easier decision. 
 - Backpropogate our errors to figure out how to fix our mistakes 
 - Forwardpropogate - how our data is entered and flows through the network. 
- 
+- Training error will always decrease, however, validation error is quadratic, so we need to big brain where to stop the training at the minimum of the validation set. 
