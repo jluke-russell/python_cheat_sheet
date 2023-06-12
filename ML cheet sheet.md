@@ -86,3 +86,13 @@ Machine learning models and AI can be over confident when over trained thus prod
 - Backpropogate our errors to figure out how to fix our mistakes 
 - Forwardpropogate - how our data is entered and flows through the network. 
 - Training error will always decrease, however, validation error is quadratic, so we need to big brain where to stop the training at the minimum of the validation set. 
+
+### Convolutional Nueral Networks
+- Each nueron is trained on a section of grid (pixels) and collects the value of the dot product for that area. Dot Product is the weight vector x input vector.
+- weight vector is called a kernel or filter, moving the same function over a different set of inputs creates a convolution and the output is called a feature map. 
+- 7x7 has a 3x3 move over it creating a 5x5 output as the kernel moves across the input. 
+- Feature map shows where the patters you are looking for appear. The more kernels the more feature maps get overlayed on each other. 
+- Padding: Starting in top left corner = no padding. Going outside input by 1 (up and left) is called padding by 1. 
+- Stride: how many pixels to move over (depends on how large the kernel is too).
+- Each kernel looks for a unique feature and aspect of said feature. Once layered, it should create the image. 
+- Look for image recognition code and copy it - Bro Allred
