@@ -96,3 +96,4 @@ Machine learning models and AI can be over confident when over trained thus prod
 - Stride: how many pixels to move over (depends on how large the kernel is too).
 - Each kernel looks for a unique feature and aspect of said feature. Once layered, it should create the image. 
 - Look for image recognition code and copy it - Bro Allred
+- Weight regularization: kernel_regularizer = regularizers.l2(0.005)
