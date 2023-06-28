@@ -72,7 +72,7 @@ Machine learning models and AI can be over confident when over trained thus prod
 - Squared error reduces the impact of outliers - smooths things out. In this case two wrongs make a right (sorta).
 - Normalization: rescales everything between 0-1. The issue is you end up refitting the holdout set compared to the training set. The max and mins can be different. 
 
-### (Artificial) Neural Networks
+### (Artificial) Neural Networks NN
 
 - Mimicks the human brain (neurons and synapses)
 - neurons connect to each other and pass info, the next neuron decides whether or not the previous one's decision was important or nah. 
@@ -87,7 +87,7 @@ Machine learning models and AI can be over confident when over trained thus prod
 - Forwardpropogate - how our data is entered and flows through the network. 
 - Training error will always decrease, however, validation error is quadratic, so we need to big brain where to stop the training at the minimum of the validation set. 
 
-### Convolutional Nueral Networks
+### Convolutional Nueral Networks CNN
 - Each nueron is trained on a section of grid (pixels) and collects the value of the dot product for that area. Dot Product is the weight vector x input vector.
 - weight vector is called a kernel or filter, moving the same function over a different set of inputs creates a convolution and the output is called a feature map. 
 - 7x7 has a 3x3 move over it creating a 5x5 output as the kernel moves across the input. 
@@ -97,3 +97,14 @@ Machine learning models and AI can be over confident when over trained thus prod
 - Each kernel looks for a unique feature and aspect of said feature. Once layered, it should create the image. 
 - Look for image recognition code and copy it - Bro Allred
 - Weight regularization: kernel_regularizer = regularizers.l2(0.005)
+
+### Recurrent Neural Network RNN
+- A layer's outputs come back into that same layer as an input, it can also go back as many layers as you want. 
+- Some data moves to the next neuron layer while some loops back with a new input 
+- Basically a CNN but OVER TIME not SPACE -> each neuron learns a pattern
+- Back Propogation is now thru time or BPTT
+- There is order to the data, things have to be output in a certain order
+- There is so much going on within one neuron layer. 
+- We use a tanh activation to put values between -1 and 1 that way we create a bigger gradient and that gives us candidate memory 
+- There are also sigmoidal activations that act as switches (0 and 1) to tell the model what memories to to keep and what memories to forget
+- I think this is how our brains work and how we learn and retain info 
